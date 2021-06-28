@@ -1,0 +1,32 @@
+<html>
+  <body>
+    <h1 id="Valid1">Header with an ID</h1>
+    <h2 id="Valid2">Another Header with an ID</h2>
+
+    <h2><a name="Valid3">Named anchor</a></h2>
+    <h2><a name="Valid4">Named anchor</a></h2>
+    <h2><a name="Valid5">Named anchor</a></h2>
+    <div><p><a name="Valid6">Nested named anchor</a></p></div>
+
+    <h1>And now some link tests that should pass.</h1>
+
+    <ul>
+      <li><a href="#Valid1">Link to ID</a></li>
+      <li><a href="#Valid2">Link to ID</a></li>
+      <li><a href="#Valid3">Link to named anchor</a></li>
+      <li><a href="#Valid4">Link to named anchor</a></li>
+      <li><a href="#Valid5">Link to named anchor</a></li>
+      <li><a href="#Valid6">Link to named anchor</a></li>
+      <li><a href="test.html#Valid1">Has file</a></li>
+      <li><a href=".">Existing directory</a></li>
+      <li><a href="https://www.somewebsite.com">This should be ignored</a></li>
+    </ul>
+
+    <h1>And now some link tests that should fail.</h1>
+
+    <p><a href="#Valid1a">No such anchor</a></p>
+    <p><a href="#Valid7">No such anchor</a></p>
+    <p><a href="test.html#Nope">No such anchor</a></p>
+    <p><a href="missing_file.html">No such file</a></p>
+  </body>
+</html>
